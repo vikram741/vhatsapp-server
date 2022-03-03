@@ -18,6 +18,7 @@
     "angularx-qrcode": "^10.0.12",
     "cors": "^2.8.5",
     "eslint-config-google": "^0.14.0",
+    "express": "^4.17.3",
     "path": "^0.12.7",
     "puppeteer": "^13.4.1",
     "rxjs": "~6.6.0",
