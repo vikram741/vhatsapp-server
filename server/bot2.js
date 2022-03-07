@@ -24,6 +24,18 @@ const createSession = async (req, res)=>{
 
 
 const sendMessages = async (req, res) => {
+    if (req.body.list) {
+        return res.send({
+            status: false,
+            message: 'list required',
+        });
+    }
+    if (req.body.message) {
+        return res.send({
+            status: false,
+            message: 'message required',
+        });
+    }
     const input = req.body.list.split('\n');
     const list = [];
     const failedList = [];
