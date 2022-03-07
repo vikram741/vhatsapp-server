@@ -4,7 +4,7 @@ import { ApiService } from './api.service';
 @Injectable()
 export class VaService {
 
-    private baseUrl = 'http://localhost:3000/api'
+    private baseUrl = '/'
 
     constructor(private apiService: ApiService) { }
 
