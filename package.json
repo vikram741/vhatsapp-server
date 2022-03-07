@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "start": "node server",
-    "build": "ng build --prod --base-ref ."
+    "build": "ng build --prod"
   },
   "private": true,
   "dependencies": {
