@@ -17,9 +17,6 @@ app.get('/api', (req, res)=>{
     res.send('hi');
 });
 
-app.get('/', function(req, res) {
-    res.sendFile(path.join(__dirname, 'dist/Vhatsapp/index.html'));
-});
 
 /** Get port from environment and store in Express. */
 const port = process.env.PORT || '3000';
