@@ -9,7 +9,7 @@ const createSession = async (req, res)=>{
         client.on('qr', (qr) => {
         // Generate and scan this code with your phone
             console.log('QR RECEIVED', qr);
-            res.send({
+            res.json({
                 status: true,
                 data: {
                     urlCode: qr,
@@ -24,13 +24,13 @@ const createSession = async (req, res)=>{
 
 
 const sendMessages = async (req, res) => {
-    if (req.body.list) {
+    if (!req.body.list) {
         return res.send({
             status: false,
             message: 'list required',
         });
     }
-    if (req.body.message) {
+    if (!req.body.message) {
         return res.send({
             status: false,
             message: 'message required',
@@ -60,7 +60,7 @@ const sendMessages = async (req, res) => {
         }
     }
 
-    res.send({
+    res.json({
         status: true,
         data: {
             failedList,
